@@ -1,5 +1,6 @@
-import React from "react"
+import React from "react";
+import Layout from "../components/Layout";
 
-export default function Home() {
-  return <div className="bg-green-400">Hello world!</div>
-}
+const IndexPage = ({ data }) => <Layout>index</Layout>;
+
+export default IndexPage;
