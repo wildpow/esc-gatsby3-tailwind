@@ -1,0 +1,69 @@
+.footerRoot {
+  @media print {
+    display: none;
+  }
+}
+.footerRoot a, .footerRoot svg {
+  @apply text-blueGray-100 transition duration-200 ease-in-out;
+}
+
+.footerRoot h3, .footerRoot h4{
+  @apply text-blueGray-400 text-lg;
+}
+.topWrapper {
+  max-width: 1440px;
+}
+.topWrapper section {
+  width: 310px;
+  @apply pb-4;
+}
+.topWrapper section h3 {
+  @apply pb-2 font-medium uppercase;
+}
+.link:hover {
+  transform: scale3d(1.05, 1.05, 1);
+}
+.middleWrapper {
+  max-width: 1224px;
+
+}
+.middleWrapper__contact a{
+  @apply py-0 px-3 text-red-200 underline hover:text-lightBlue-100;
+}
+.social-icons {
+  @apply flex;
+}
+.social-icons a {
+  @apply pr-8;
+}
+.social-icons a svg {
+  width: 35px;
+  height: 35px;
+}
+.social-icons a svg:hover {
+  transform: scale(1.2);
+}
+.bottomWrapper {
+  max-width: 1224px;
+}
+.bottomWrapper aside a {
+  @apply underline px-2 text-red-200 hover:text-lightBlue-100; 
+}
+.navlinks ul li {
+  @apply m-0 pl-5 relative pb-2;
+}
+.navlinks ul li::after {
+  content: "";
+  height: 0.25em;
+  width: 0.25em;
+
+  transform: rotate(45deg);
+  top: 0.4em;
+  @apply bg-blueGray-400 absolute block left-0;
+}
+.navlinks ul li span {
+  @apply text-blueGray-400 pl-4 ;
+}
+.hours h6 {
+  @apply pb-2 text-base
+}
