@@ -326,7 +326,7 @@ const Footer = ({ moved }) => {
         </section>
         <section>
           <h3>Navigate</h3>
-          <div className="flex justify-between navlinks">
+          <div className="navlinks">
             <ul className="pl-0 mt-0 list-none ">
               <li>
                 <Link to="/brands">Mattresses</Link>

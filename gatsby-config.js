@@ -18,7 +18,13 @@ const cfg = {
     siteUrl,
   },
   plugins: [
-    "gatsby-plugin-postcss",
+    `gatsby-plugin-postcss`,
+    // {
+    //   resolve: `gatsby-plugin-postcss`,
+    //   options: {
+    //     postCssPlugins: [require(`postcss-nested`)],
+    //   },
+    // },
     `gatsby-plugin-webpack-bundle-analyser-v2`,
     `gatsby-plugin-remove-serviceworker`,
     `gatsby-plugin-react-helmet`,

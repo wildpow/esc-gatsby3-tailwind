@@ -1,69 +1,87 @@
 .footerRoot {
+  a,
+  svg {
+    @apply transition duration-200 ease-in-out text-blueGray-100;
+  }
+  h3,
+  h4 {
+    @apply text-lg text-blueGray-400;
+  }
   @media print {
     display: none;
   }
 }
-.footerRoot a, .footerRoot svg {
-  @apply text-blueGray-100 transition duration-200 ease-in-out;
-}
 
-.footerRoot h3, .footerRoot h4{
-  @apply text-blueGray-400 text-lg;
-}
 .topWrapper {
   max-width: 1440px;
+  section {
+    width: 310px;
+    @apply pb-4;
+    h3 {
+      @apply pb-2 font-medium uppercase;
+    }
+  }
 }
-.topWrapper section {
-  width: 310px;
-  @apply pb-4;
-}
-.topWrapper section h3 {
-  @apply pb-2 font-medium uppercase;
-}
+
 .link:hover {
   transform: scale3d(1.05, 1.05, 1);
 }
 .middleWrapper {
   max-width: 1224px;
-
 }
-.middleWrapper__contact a{
-  @apply py-0 px-3 text-red-200 underline hover:text-lightBlue-100;
+.middleWrapper__contact a {
+  @apply px-3 py-0 text-red-200 underline hover:text-lightBlue-100;
 }
 .social-icons {
   @apply flex;
+  a {
+    @apply pr-8;
+    svg {
+      width: 35px;
+      height: 35px;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
 }
-.social-icons a {
-  @apply pr-8;
-}
-.social-icons a svg {
-  width: 35px;
-  height: 35px;
-}
-.social-icons a svg:hover {
-  transform: scale(1.2);
-}
+
 .bottomWrapper {
   max-width: 1224px;
+  aside a {
+    @apply px-2 text-red-200 underline hover:text-lightBlue-100;
+  }
 }
-.bottomWrapper aside a {
-  @apply underline px-2 text-red-200 hover:text-lightBlue-100; 
-}
-.navlinks ul li {
-  @apply m-0 pl-5 relative pb-2;
-}
-.navlinks ul li::after {
-  content: "";
-  height: 0.25em;
-  width: 0.25em;
 
-  transform: rotate(45deg);
-  top: 0.4em;
-  @apply bg-blueGray-400 absolute block left-0;
-}
-.navlinks ul li span {
-  @apply text-blueGray-400 pl-4 ;
-}
 .hours h6 {
-  @apply pb-2 text-base
+  @apply pb-2 text-base;
+}
+
+.navlinks {
+  @apply flex justify-between;
+  li {
+    @apply relative pb-2 pl-5 m-0;
+  }
+  & li::after {
+    content: "";
+    height: 0.25em;
+    width: 0.25em;
+    transform: rotate(45deg);
+    top: 0.4em;
+    @apply absolute left-0 block bg-blueGray-400;
+  }
+  a {
+    @apply border-b border-transparent;
+  }
+  span {
+    @apply pl-4 text-blueGray-400;
+  }
+  & li:hover {
+    & span {
+      @apply text-blueGray-100;
+    }
+    & a {
+      @apply border-blueGray-400;
+    }
+  }
 }
