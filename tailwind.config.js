@@ -1,10 +1,16 @@
 const colors = require("tailwindcss/colors");
 const typography = require("@tailwindcss/typography");
+const { screens } = require("tailwindcss/defaultTheme");
 
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}"], // purge css ?
   darkMode: false, // or 'media' or 'class'
   theme: {
+    screens: {
+      xms: "400px",
+      phablet: "550px",
+      ...screens,
+    },
     fontFamily: {
       sans: [
         "Roboto",
@@ -34,10 +40,16 @@ module.exports = {
     },
 
     extend: {
-      screens: {
-        xms: "400px",
-        phablet: "550px",
+      keyframes: {
+        fade: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
       },
+      animation: {
+        fade: `fade 0.5s linear normal`,
+      },
+
       colors: {
         brandBackground: colors.gray[100],
         brandBlue: colors.lightBlue[900],
