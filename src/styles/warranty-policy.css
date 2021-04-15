@@ -1,0 +1,12 @@
+.warrantyRoot {
+  @apply text-blueGray-900 bg-white shadow-md animate-fade mt-3  pb-0.5 lg:pb-3.5 max-w-7xl mx-auto;
+}
+
+.warrantyHeading {
+  @apply mb-6 font-sans text-base text-center bg-lightBlue-700 text-blueGray-50 lg:text-3xl lg:py-2;
+}
+
+.warrantyPara {
+  /* text-indent: 25px; */
+  @apply mx-auto mb-6 font-serif font-light prose sm:prose-lg md:prose-xl lg:prose-2xl;
+}

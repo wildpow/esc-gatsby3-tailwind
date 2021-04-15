@@ -3,16 +3,17 @@ import { graphql } from "gatsby";
 import PropTypes from "prop-types";
 import { HelmetDatoCms } from "gatsby-source-datocms";
 import Layout from "../components/Layout";
+import "../styles/warranty-policy.css";
 
 const Policies = ({ data }) => (
   <Layout>
     <HelmetDatoCms seo={data.datoCmsSeo.seoMetaTags} />
-    <article>
+    <article className="warrantyRoot">
       <header>
-        <h2>Terms and Policies</h2>
+        <h2 className="warrantyHeading">Terms and Policies</h2>
       </header>
       <h3>365 Day Comfort Guarantee</h3>
-      <p>
+      <p className="warrantyPara">
         It will take anywhere from 30 to 90 nights for your new mattress to
         break in and for your body to adjust to the new support and comfort.
         Because of this, we require that you sleep on your new mattress for a
@@ -20,7 +21,7 @@ const Policies = ({ data }) => (
         comfortable within 90 days of your original mattress’s delivery date,
         you may exchange or return your mattress one time in this period.
       </p>
-      <p>
+      <p className="warrantyPara">
         Delivery and set up fees are non-refundable. We do not charge restocking
         fees, only a redelivery fee of $79.99. E.S.C. Mattress Center is unable
         to exchange or refund any mattress that is stained, soiled, or in any
@@ -35,7 +36,7 @@ const Policies = ({ data }) => (
         See associate for more details.
       </p>
       <h3>Low Price Guarantee</h3>
-      <p>
+      <p className="warrantyPara">
         E.S.C. Mattress Center guarantees to meet, or beat, any other licensed
         retailer’s price on the same or comparable mattress set advertised for
         less than your invoiced price within 90 days of purchase. Bring in the
@@ -44,7 +45,7 @@ const Policies = ({ data }) => (
         are excluded. Applies to new product only.
       </p>
       <h3>Delivery</h3>
-      <p>
+      <p className="warrantyPara">
         As a small business, we do most of our deliveries ourselves. E.S.C.
         Mattress Center is not responsible for any loss or damage caused during
         delivery. Please make sure there is a clear path from the door to the
@@ -52,7 +53,7 @@ const Policies = ({ data }) => (
         number of pieces being delivered and is limited to mattresses and
         foundations. Frames, furniture, waterbeds, etc. cannot be removed.
       </p>
-      <p>
+      <p className="warrantyPara">
         If you choose to pick up your product, you should inspect your items
         carefully prior to leaving our store. We recommend the use of a covered
         truck for transporting mattress sets. If requested, we will help you
