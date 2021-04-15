@@ -19,6 +19,7 @@ import StoreProvider from "../../context/StoreContext";
 //   /* padding-right: ${({ cartStatus, menuStatus }) =>
 //     cartStatus === "open" || menuStatus === "open" ? "15px" : "0px"}; */
 // `;
+import "../../styles/layout.css";
 
 function Layout({ children, ...rest }) {
   return (
@@ -27,7 +28,12 @@ function Layout({ children, ...rest }) {
         <Headroom>
           <Header />
         </Headroom>
-        {children}
+        <main className="relative z-10 w-full shadow-2xl pageContentRoot bg-blueGray-100">
+          <div className="mx-auto" style={{ maxWidth: "1440px" }}>
+            {children}
+          </div>
+        </main>
+
         <Footer />
       </div>
     </StoreProvider>

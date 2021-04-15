@@ -1,0 +1,17 @@
+.pageContentRoot {
+  will-change: transform;
+  transition: all 0.75s;
+}
+@media print {
+  .pageContentRoot {
+    box-shadow: none;
+  }
+}
+@media (min-width: 640px) {
+  .pageContentRoot {
+    transform: translate3d(0vw, 0, 0);
+  }
+}
+.moved {
+  transform: translate3d(-400px, 0, 0);
+}
