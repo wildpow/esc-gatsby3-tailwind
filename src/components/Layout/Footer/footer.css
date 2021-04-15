@@ -32,16 +32,13 @@
 .middleWrapper__contact a {
   @apply px-3 py-0 text-red-200 underline hover:text-lightBlue-100;
 }
-.social-icons {
-  @apply flex;
-  a {
-    @apply pr-8;
-    svg {
-      width: 35px;
-      height: 35px;
-      &:hover {
-        transform: scale(1.2);
-      }
+.social-icons a {
+  @apply pr-8;
+  svg {
+    width: 35px;
+    height: 35px;
+    &:hover {
+      transform: scale(1.2);
     }
   }
 }
@@ -53,12 +50,7 @@
   }
 }
 
-.hours h6 {
-  @apply pb-2 text-base;
-}
-
 .navlinks {
-  @apply flex justify-between;
   li {
     @apply relative pb-2 pl-5 m-0;
   }

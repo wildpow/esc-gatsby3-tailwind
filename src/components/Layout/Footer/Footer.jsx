@@ -1,7 +1,6 @@
 import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
-// import tw, { styled, theme } from "twin.macro";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 import Yelp from "../../../svg/yelp-brands.svg";
 import Insta from "../../../svg/instagram-brands.svg";
@@ -11,250 +10,6 @@ import useFooterIcons from "./footerIcons.query";
 import useReaders from "./readersChoice.query";
 // import Bird from "./Bird";
 import "./footer.css";
-// const FooterRoot = styled(`footer`)`
-//   font-family: ${theme`fontFamily.sans`};
-//   @media print {
-//     display: none;
-//   }
-//   a,
-//   svg {
-//     color: ${theme`colors.blueGray[100]`};
-//     transition: all 0.2s ease-in;
-//     &:focus {
-//       box-shadow: 0 0 0 1px ${theme`colors.blue.300`} inset;
-//       outline: 0;
-//       transition: box-shadow 0.15s ease-in-out;
-//     }
-//   }
-//   h3,
-//   h4 {
-//     color: ${theme`colors.blueGray[400]`};
-//     ${tw`text-lg`};
-//   }
-//   color: ${theme`colors.blueGray[100]`};
-
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   padding-right: ${theme`spacing.5`};
-//   padding-left: ${theme`spacing.5`};
-//   padding-top: ${theme`spacing.4`};
-//   background-color: ${theme`colors.lightBlue[900]`};
-//   margin: 0 auto;
-//   .topWrapper {
-//     max-width: 1440px;
-//     margin: 0 auto;
-//     width: 100%;
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: space-evenly;
-//     section {
-//       width: 310px;
-//       padding-bottom: ${theme`spacing.4`};
-//       h3 {
-//         font-weight: 500;
-//         padding-bottom: ${theme`spacing.2`};
-//         text-transform: uppercase;
-//       }
-//     }
-//   }
-
-//   .middleWrapper {
-//     margin: 0 auto;
-//     /* margin-top: 20px; */
-//     max-width: 1224px;
-//     border-top: 2px solid ${theme`colors.blueGray.100`}10;
-//     display: flex;
-//     justify-content: center;
-//     padding: ${theme`spacing.4`} 0;
-//     flex-direction: column;
-//     font-weight: 300;
-//     font-size: ${tw`text-sm`};
-//     h4 {
-//       font-size: ${tw`text-base`};
-//       margin: 0;
-//       text-align: center;
-//       font-weight: 400;
-//       color: ${theme`colors.blueGray.400`};
-//       padding-bottom: ${theme`spacing.2`};
-//     }
-//     span {
-//       text-align: center;
-//     }
-//     aside {
-//       display: flex;
-//       flex-direction: column;
-//     }
-//   }
-//   .middleWrapper__contact {
-//     padding-top: ${theme`spacing.2`};
-//     display: flex;
-//     justify-content: center;
-//     font-size: ${tw`text-base`};
-//     a {
-//       padding: 0 10px;
-//       text-decoration: underline;
-//       color: ${theme`colors.red.200`};
-//       &:hover {
-//         color: ${theme`colors.lightBlue.100`};
-//       }
-//     }
-//   }
-//   transition: 0.75s;
-//   will-change: transform;
-//   @media (min-width: ${theme`screens.sm`}) {
-//     transform: translate3d(0vw, 0, 0);
-//     &.moved {
-//       transform: translate3d(-400px, 0, 0);
-//     }
-//     .bottomWrapper {
-//       flex-direction: row;
-//     }
-//   }
-//   .firstUL {
-//     padding-left: 0;
-//   }
-//   .navlinks {
-//     display: flex;
-//     justify-content: space-between;
-//     ul {
-//       list-style: none;
-//       margin-top: 0;
-//       li {
-//         margin: 0;
-//         padding-left: 1.3em;
-//         position: relative;
-//         padding-bottom: ${theme`spacing.2`};
-//         &:after {
-//           content: "";
-//           height: 0.25em;
-//           width: 0.25em;
-//           background: ${theme`colors.blueGray[400]`};
-//           display: block;
-//           position: absolute;
-//           transform: rotate(45deg);
-//           top: 0.4em;
-//           left: 0;
-//         }
-//         &:hover {
-//           a {
-//             border-bottom-color: ${theme`colors.blueGray[400]`};
-//             color: white;
-//           }
-//           span {
-//             color: ${theme`colors.blueGray[100]`};
-//           }
-//         }
-//         a {
-//           border-bottom: 1px solid transparent;
-//           text-decoration: none;
-//           font-weight: 300;
-//         }
-//         span {
-//           transition: all 0.2s ease;
-//           padding-left: ${theme`spacing.4`};
-//           font-weight: 300;
-//           color: ${theme`colors.blueGray[400]`};
-//         }
-//       }
-//     }
-//   }
-
-//   .social-icons {
-//     display: flex;
-//     a {
-//       padding-right: ${theme`spacing.8`};
-//       svg {
-//         width: 35px;
-//         height: 35px;
-//       }
-//       &:hover {
-//         transform: scale(1.2);
-//       }
-//     }
-//   }
-//   .bottomWrapper {
-//     flex-direction: column;
-//     border-top: 2px solid ${theme`colors.blueGray.100`}10;
-//     display: flex;
-//     justify-content: center;
-//     padding: ${theme`spacing.4`} 0;
-//     max-width: 1224px;
-//     margin: 0 auto;
-//     aside {
-//       display: flex;
-//       justify-content: center;
-//       a {
-//         text-decoration: underline;
-//         padding: 0 10px;
-//         color: ${theme`colors.red.200`};
-//         &:hover {
-//           color: ${theme`colors.lightBlue.100`};
-//         }
-//       }
-//     }
-//     small {
-//       text-align: center;
-//       padding-top: 10px;
-//       font-weight: 300;
-//       color: ${theme`colors.blueGray.400`};
-//       ${tw`text-xs`};
-//     }
-//   }
-//   .hours {
-//     h3 {
-//       padding-top: ${theme`spacing.4`};
-//     }
-//     justify-self: flex-end;
-//     h6 {
-//       /* color: ${theme`colors.gray.100`}; */
-//       font-weight: 300;
-//       display: flex;
-//       margin: 0;
-//       font-size: ${tw`text-base`};
-//     }
-//   }
-//   .hours__inner {
-//     display: flex;
-//   }
-//   .hours__days {
-//     padding-right: ${theme`spacing.6`};
-//     h6 {
-//       margin: 0;
-//       padding-bottom: ${theme`spacing.2`};
-//       font-size: ${tw`text-base`};
-//     }
-//   }
-//   .hours__time {
-//     h6 {
-//       /* margin: 0; */
-//       padding-bottom: ${theme`spacing.2`};
-//       font-size: ${tw`text-base`};
-//     }
-//     display: flex;
-//     flex-direction: column;
-//   }
-//   .iconWrapper {
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: space-between;
-//   }
-
-//   .sticker {
-//     width: 100px;
-//   }
-//   .clothesForKids {
-//     @media (max-width: 350px) {
-//       padding-left: 5px;
-//       width: 139px;
-//     }
-//   }
-//   .link {
-//     &:hover {
-//       transform: scale3d(1.05, 1.05, 1);
-//     }
-//   }
-// `;
 
 const Footer = ({ moved }) => {
   const { images } = useFooterIcons();
@@ -269,12 +24,12 @@ const Footer = ({ moved }) => {
     return null;
   });
   return (
-    <footer className="flex flex-col justify-between px-5 pt-4 font-sans bg-lightBlue-900 text-blueGray-100 footerRoot">
+    <footer className="flex flex-col justify-between px-5 pt-20 font-sans bg-lightBlue-900 text-blueGray-100 footerRoot">
       <div className="flex flex-wrap w-full mx-auto my-0 topWrapper justify-evenly">
         <section>
           <div>
             <h3>Stay Connected</h3>
-            <div className="transition duration-200 ease-in-out social-icons ">
+            <div className="flex transition duration-200 ease-in-out social-icons ">
               <OutboundLink
                 href="https://www.facebook.com/ESCMattressCenter/"
                 target="_blank"
@@ -314,19 +69,19 @@ const Footer = ({ moved }) => {
             <h3>Hours</h3>
             <div className="flex">
               <div className="pr-6">
-                <h6>Mon-Sat:</h6>
-                <h6>Sunday:</h6>
+                <h6 className="pb-2 text-base">Mon-Sat:</h6>
+                <h6 className="pb-2 text-base">Sunday:</h6>
               </div>
               <div className="flex flex-col ">
-                <h6>10am - 7pm</h6>
-                <h6> 10am - 6pm</h6>
+                <h6 className="pb-2 text-base">10am - 7pm</h6>
+                <h6 className="pb-2 text-base"> 10am - 6pm</h6>
               </div>
             </div>
           </div>
         </section>
         <section>
           <h3>Navigate</h3>
-          <div className="navlinks">
+          <div className="flex justify-between navlinks">
             <ul className="pl-0 mt-0 list-none ">
               <li>
                 <Link to="/brands">Mattresses</Link>
