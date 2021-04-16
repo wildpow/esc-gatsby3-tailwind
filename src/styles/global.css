@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-sans text-blueGray-700 font-bold;
+  }
+
+  p {
+    @apply text-blueGray-600 font-serif;
+  }
+}
+
+@layer components {
+  .heading-underline {
+    @apply border-b-4 border-red-800;
+  }
+  .focus {
+    @apply focus:border-lightBlue-300 focus:ring-4 focus:ring-lightBlue-300 focus:ring-opacity-50 outline-none ring-offset-2;
+  }
+}
