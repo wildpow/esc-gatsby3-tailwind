@@ -1,6 +1,7 @@
 const colors = require("tailwindcss/colors");
 const typography = require("@tailwindcss/typography");
 const { screens } = require("tailwindcss/defaultTheme");
+const forms = require("@tailwindcss/forms");
 
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}"], // purge css ?
@@ -65,5 +66,5 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [typography],
+  plugins: [typography, forms],
 };
