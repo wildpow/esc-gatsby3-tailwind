@@ -12,7 +12,7 @@ const ContactUs = ({ data }) => {
   return (
     <Layout>
       <HelmetDatoCms seo={seo.seoMetaTags} />
-      <section>
+      <section className="pb-20">
         <GatsbyImage image={panda.childImageSharp.gatsbyImageData} />
         <div className="xl:mx-auto sm:mx-5 relative z-10 max-w-6xl p-3 mx-auto -mt-5 bg-white rounded-lg rounded-b-none shadow-lg xl:-mt-24 lg:-mt-20 md:p-10 phablet:-mt-12  sm:p-10">
           <h2 className="text-2xl heading-underline sm:text-3xl lg:text-5xl">
