@@ -28,7 +28,7 @@ function Layout({ children, ...rest }) {
         <Headroom>
           <Header />
         </Headroom>
-        <main className="relative z-10 w-full shadow-2xl pageContentRoot bg-blueGray-100">
+        <main className="relative z-10 w-full shadow-2xl pageContentRoot bg-blueGray-50">
           <div className="mx-auto" style={{ maxWidth: "1440px" }}>
             {children}
           </div>
