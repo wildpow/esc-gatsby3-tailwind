@@ -26,7 +26,7 @@ const Footer = ({ moved }) => {
   return (
     <footer className="flex flex-col justify-between px-5 pt-20 font-sans bg-lightBlue-900 text-blueGray-100 footerRoot">
       <div className="flex flex-wrap w-full mx-auto my-0 topWrapper justify-evenly">
-        <section>
+        <section className="subpixel-antialiased	">
           <div>
             <h3>Stay Connected</h3>
             <div className="flex transition duration-200 ease-in-out social-icons ">
@@ -68,13 +68,22 @@ const Footer = ({ moved }) => {
           <div className="self-end pt-4">
             <h3>Hours</h3>
             <div className="flex">
-              <div className="pr-6">
-                <h6 className="pb-2 text-base">Mon-Sat:</h6>
-                <h6 className="pb-2 text-base">Sunday:</h6>
+              <div className="pr-6 ">
+                <h6 className="pb-2 text-base text-blueGray-50 font-normal">
+                  Mon-Sat:
+                </h6>
+                <h6 className="pb-2 text-base text-blueGray-50 font-normal">
+                  Sunday:
+                </h6>
               </div>
               <div className="flex flex-col ">
-                <h6 className="pb-2 text-base">10am - 7pm</h6>
-                <h6 className="pb-2 text-base"> 10am - 6pm</h6>
+                <h6 className="pb-2 text-base text-blueGray-50 font-normal">
+                  10am - 7pm
+                </h6>
+                <h6 className="pb-2 text-base text-blueGray-50 font-normal">
+                  {" "}
+                  10am - 6pm
+                </h6>
               </div>
             </div>
           </div>
