@@ -15,7 +15,7 @@ const ContactInfo = () => (
             rel="noopener noreferrer"
             target="_blank"
             aria-label="Google maps link to our store"
-            className="text-lightBlue-600"
+            className="text-lightBlue-600 underline hover:text-red-600"
           >
             10121 Evergreen Way,
             <br />
@@ -37,7 +37,7 @@ const ContactInfo = () => (
           <a
             href="tel:1-425-512-0017"
             aria-label="Store phone number"
-            className="text-lightBlue-600"
+            className="text-lightBlue-600 underline hover:text-red-600"
           >
             (425) 512-0017
           </a>
@@ -46,11 +46,17 @@ const ContactInfo = () => (
       <div className="py-2 px-4 w-5/6 phablet:w-60">
         <h5 className="heading-underline text-lg mb-1 xl:text-xl">Links</h5>
         <p className="text-base">
-          <Link to="/policies" className="text-lightBlue-600 ">
+          <Link
+            to="/policies"
+            className="text-lightBlue-600 underline hover:text-red-600"
+          >
             Terms/Policies
           </Link>
           <br />
-          <Link to="/warranty" className="text-lightBlue-600 ">
+          <Link
+            to="/warranty"
+            className="text-lightBlue-600 underline hover:text-red-600"
+          >
             {" "}
             Warranty Info
           </Link>
