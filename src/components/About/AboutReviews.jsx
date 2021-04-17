@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 // const ReviewWrapper = styled.div`
 //   height: 350px;
@@ -111,12 +111,10 @@ import React from "react"
 //   }
 // `;
 
-const Reviews = ({ maxIndex, content }) => {
-  return <div>sdfesf</div>
-}
+const Reviews = ({ maxIndex, content }) => <div>sdfesf</div>;
 // Reviews.propTypes = {
 //   maxIndex: PropTypes.number.isRequired,
 //   content: PropTypes.instanceOf(Object).isRequired,
 // };
 
-export default Reviews
+export default Reviews;
