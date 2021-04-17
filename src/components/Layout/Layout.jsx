@@ -19,23 +19,26 @@ import StoreProvider from "../../context/StoreContext";
 //   /* padding-right: ${({ cartStatus, menuStatus }) =>
 //     cartStatus === "open" || menuStatus === "open" ? "15px" : "0px"}; */
 // `;
+import WindowSizeProvider from "../../context/WindowSizeContext";
 import "../../styles/layout.css";
 
 function Layout({ children, ...rest }) {
   return (
     <StoreProvider>
-      <div {...rest}>
-        <Headroom>
-          <Header />
-        </Headroom>
-        <main className="relative z-10 w-full shadow-2xl pageContentRoot bg-blueGray-50">
-          <div className="mx-auto" style={{ maxWidth: "1440px" }}>
-            {children}
-          </div>
-        </main>
+      <WindowSizeProvider>
+        <div {...rest}>
+          <Headroom>
+            <Header />
+          </Headroom>
+          <main className="relative z-10 w-full shadow-2xl pageContentRoot bg-blueGray-50">
+            <div className="mx-auto" style={{ maxWidth: "1440px" }}>
+              {children}
+            </div>
+          </main>
 
-        <Footer />
-      </div>
+          <Footer />
+        </div>
+      </WindowSizeProvider>
     </StoreProvider>
   );
 }

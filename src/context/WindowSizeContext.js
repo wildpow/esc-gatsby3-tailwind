@@ -1,14 +1,13 @@
 import React, {
+  createContext,
+  useContext,
   useState,
   useEffect,
   useRef,
-  createContext,
-  useContext,
 } from "react";
+import PropTypes from "prop-types";
 
 const WindowSizeCtx = createContext();
-
-export const useWindowSize = () => useContext(WindowSizeCtx);
 
 const WindowSizeProvider = ({ children }) => {
   const resizeInProgress = useRef(false);
@@ -46,5 +45,9 @@ const WindowSizeProvider = ({ children }) => {
     </WindowSizeCtx.Provider>
   );
 };
-
+WindowSizeProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 export default WindowSizeProvider;
+
+export const useWindowSize = () => useContext(WindowSizeCtx);
