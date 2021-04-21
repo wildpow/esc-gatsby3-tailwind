@@ -11,7 +11,7 @@ import React from "react";
 import { Footer, MobileMenu, Cart, Header } from "./LayoutComponents";
 // import CartIndicator from "./Cart/CartIndicator";
 // import StoreContext from "../../context/StoreContext";
-import StoreProvider from "../../context/StoreContext";
+import StoreProvider from "../../context/StoreCtx";
 // const MainRoot = styled.div`
 //   max-width: 1440px;
 //   margin-left: auto;
@@ -19,7 +19,7 @@ import StoreProvider from "../../context/StoreContext";
 //   /* padding-right: ${({ cartStatus, menuStatus }) =>
 //     cartStatus === "open" || menuStatus === "open" ? "15px" : "0px"}; */
 // `;
-import WindowSizeProvider from "../../context/WindowSizeContext";
+import WindowSizeProvider from "../../context/WindowSizeCtx";
 import "../../styles/layout.css";
 
 function Layout({ children, ...rest }) {
