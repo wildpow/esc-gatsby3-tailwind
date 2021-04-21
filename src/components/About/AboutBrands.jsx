@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Carousel } from "react-responsive-carousel";
-import { useWindowSize } from "../../context/WindowSizeContext";
+import { useWindowSize } from "../../context/WindowSizeCtx";
 
 const Brands = ({ brandImages, brandText }) => {
   const { width } = useWindowSize();
