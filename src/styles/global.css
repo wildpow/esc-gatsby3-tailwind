@@ -14,6 +14,19 @@
   p {
     @apply text-blueGray-600 font-serif;
   }
+  .headroom {
+    z-index: 2 !important;
+  }
+
+  body {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+  @media print {
+    #bf-revz-widget-1484606125 {
+      display: none !important;
+    }
+  }
 }
 
 @layer components {
