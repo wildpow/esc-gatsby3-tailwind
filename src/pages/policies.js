@@ -92,12 +92,13 @@ Policies.propTypes = {
 };
 export const policiesSEO = graphql`
   query policiesSEO {
-    panda: file(relativePath: { eq: "ContactUsHeader.jpg" }) {
+    panda: file(relativePath: { eq: "test.jpeg" }) {
       childImageSharp {
         gatsbyImageData(
           formats: [JPG, WEBP, AVIF]
           layout: CONSTRAINED
           width: 1440
+          height: 415
         )
       }
     }
