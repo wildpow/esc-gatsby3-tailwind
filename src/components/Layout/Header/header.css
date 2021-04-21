@@ -1,0 +1,9 @@
+.printOnlyContactInfo {
+  display: none;
+}
+@media print {
+  .printOnlyContactInfo {
+    display: flex;
+    justify-content: space-between;
+  }
+}

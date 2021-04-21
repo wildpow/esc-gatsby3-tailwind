@@ -1,0 +1,27 @@
+.fa-shopping-cart,
+.fa-phone {
+  transition: all 0.2s ease;
+  cursor: pointer;
+  @apply text-blueGray-600;
+}
+
+/* .fa-shopping-cart:hover,
+.fa-phone:hover {
+  transform: scale(1.2);
+  @apply text-blueGray-900;
+} */
+
+.navIconsLink {
+  &:hover {
+    .fa-shopping-cart,
+    .fa-phone {
+      transform: scale(1.2);
+      @apply text-blueGray-900;
+    }
+  }
+}
+@media (max-width: 360px) {
+  .contactUsLink {
+    display: none;
+  }
+}
