@@ -6,24 +6,32 @@ import Layout from "../components/Layout";
 import LifeStyleCard from "../components/Brands/LifeStyleCard";
 import BreadCrumbs from "../components/BreadCrumbs";
 import Header from "../components/ProductListing/Header";
+import "../components/Brands/brands.css";
 
 const Brands = ({ data }) => (
   <Layout>
     <HelmetDatoCms seo={data.datoCmsSeo.seoMetaTags} />
     <BreadCrumbs here="Brands" hidenLarge />
-    <section>
+    <section className="brands_root">
       <Header
         description={data.datoCmsHeader.tagLine}
         headerBG={data.datoCmsHeader.bgImg.url}
         button={{ label: "Shop all Mattresses", url: "/brands/list" }}
         title="Our Brands"
       />
-      <div>
+      <div
+        className="brands_grid px-1 mx-auto grid items-stretch justify-center justify-items-center content-start pt-2"
+        style={{
+          maxWidth: "1440px",
+          minWidth: "320px",
+          scrollBehavior: "smooth",
+        }}
+      >
         {data.allDatoCmsBrand.nodes.map(brand => (
           <LifeStyleCard
             key={brand.id}
-            mobileHeight="228px"
-            height="228px"
+            // mobileHeight="228px"
+            // height="228px"
             title={brand.displayName}
             bgImg={brand.lifeStyleImg}
             logo={brand.brandLogo}

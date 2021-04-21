@@ -1,6 +1,6 @@
 import "./src/styles/global.css";
 import "@fontsource/roboto";
-import "@fontsource/roboto/300.css"; // footer
+import "@fontsource/roboto/300.css"; // footer brand_text
 import "@fontsource/roboto/500.css"; // footer
 import "@fontsource/roboto/700.css"; // Contact-us h2 -
 import "@fontsource/roboto/900.css"; // logo
