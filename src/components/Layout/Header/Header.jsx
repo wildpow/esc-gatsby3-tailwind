@@ -29,10 +29,7 @@ const Header = ({
       {menuStatus === "open" || cartStatus === "open" ? (
         <div className="MenuOverLay" />
       ) : null}
-      <div
-        className="flex flex-col-reverse mx-auto w-full md:flex-row md:justify-between"
-        style={{ maxWidth: "1440px" }}
-      >
+      <div className="max-w-screen-2xl  flex flex-col-reverse mx-auto w-full md:flex-row md:justify-between">
         <div className="flex items-center pl-1" style={{ height: "60px" }}>
           <Link className="brand__anchor" to="/" title="Back to home page">
             <GatsbyImage

@@ -1,7 +1,7 @@
 // import { node, string } from "prop-types";
 // import styled from "styled-components";
 // import { breakpoints, colors, boxShadow } from "../../../utils/styles";
-import React from "react"
+import React from "react";
 
 // const PageContentRoot = styled.main`
 //   position: relative;
@@ -29,31 +29,12 @@ import React from "react"
 //   }
 // `;
 
-const PageContent = ({ children, moved }) => {
-  function testUrl(str) {
-    if (str.includes("/blog/")) {
-      if (str === "/blog/" || str === "/blog") {
-        return false
-      }
-      return true
-    }
-    if (
-      str.includes("/landing") ||
-      str === "/accessories" ||
-      str === "/brands/nectar"
-    ) {
-      return true
-    }
-    return false
-  }
-  const url = typeof window !== "undefined" ? window.location.pathname : ""
-  return (
-    // <PageContentRoot className={moved} url={testUrl(url)}>
-    //   {children}
-    // </PageContentRoot>
-    <div>{children}</div>
-  )
-}
+const PageContent = ({ children, moved }) => (
+  // <PageContentRoot className={moved} url={testUrl(url)}>
+  //   {children}
+  // </PageContentRoot>
+  <div>{children}</div>
+);
 
 {
   /* PageContent.defaultProps = {
@@ -66,4 +47,4 @@ PageContent.propTypes = {
 }; */
 }
 
-export default PageContent
+export default PageContent;

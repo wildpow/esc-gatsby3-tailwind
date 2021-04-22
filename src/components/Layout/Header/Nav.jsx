@@ -16,7 +16,7 @@ const Nav = ({ cartStatus }) => (
     cartStatus={cartStatus}
     className="font-sans bg-lightBlue-800 z-0 shadow-md lg:inline-block hidden"
   >
-    <ul style={{ maxWidth: "1440px" }} className="mx-auto flex">
+    <ul className="mx-auto flex max-w-screen-2xl">
       {menuData.map(item => (
         <li key={item.name} className="flex-1 w-full   ">
           <Link

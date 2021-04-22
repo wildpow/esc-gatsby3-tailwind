@@ -1,6 +1,6 @@
 // import { useState, useRef, useEffect, useContext } from "react";
 // import styled from "styled-components";
-// import PropTypes from "prop-types";;
+import PropTypes from "prop-types";
 import Headroom from "react-headroom";
 // import FocusLock from "react-focus-lock";
 // import { useOnClickOutside, useKeyboardEvent, useIntersect } from "../Hooks";
@@ -22,25 +22,27 @@ import StoreProvider from "../../context/StoreCtx";
 import WindowSizeProvider from "../../context/WindowSizeCtx";
 import "../../styles/layout.css";
 
-function Layout({ children, ...rest }) {
+function Layout({ children, bgColor }) {
   return (
     <StoreProvider>
       <WindowSizeProvider>
-        <div {...rest}>
-          <Headroom>
-            <Header />
-          </Headroom>
-          <main className="relative z-10 w-full shadow-2xl pageContentRoot bg-blueGray-50">
-            <div className="mx-auto" style={{ maxWidth: "1440px" }}>
-              {children}
-            </div>
-          </main>
+        <Headroom pinStart={-1}>
+          <Header />
+        </Headroom>
+        <main className={` z-10 w-full shadow-2xl  ${bgColor}`}>
+          <div className="mx-auto max-w-screen-2xl">{children}</div>
+        </main>
 
-          <Footer />
-        </div>
+        <Footer />
       </WindowSizeProvider>
     </StoreProvider>
   );
 }
-
+Layout.defaultProps = {
+  bgColor: "bg-blueGray-50",
+};
+Layout.propTypes = {
+  bgColor: PropTypes.string,
+  children: PropTypes.node.isRequired,
+};
 export default Layout;
