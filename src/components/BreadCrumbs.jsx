@@ -92,7 +92,7 @@ const BreadCrumbs = props => {
   //   - plural display
   //   - query URL
   return (
-    <div BreadWrapper>
+    <div BreadWrapper className="flex">
       <Link to="/">Home</Link>
       <span>&gt;</span>
       {next && (
