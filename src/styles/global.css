@@ -15,7 +15,7 @@
     @apply text-blueGray-600 font-serif;
   }
   .headroom {
-    z-index: 2 !important;
+    z-index: 20 !important;
   }
 
   body {
