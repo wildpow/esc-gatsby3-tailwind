@@ -1,7 +1,7 @@
 // import styled from "styled-components";
 // import PropTypes from "prop-types";
 // import { colors } from "../../utils/styles";
-import React from "react"
+import React from "react";
 
 // const Button = styled.button`
 //   color: ${(props) => (props.isActive ? "white" : "#93959b")};
@@ -19,16 +19,16 @@ import React from "react"
 //   }
 // `;
 const Tab = ({ tabID, children, setActiveTab, activeTab }) => {
-  const isActive = activeTab === tabID
+  const isActive = activeTab === tabID;
   return (
     // <Button onClick={() => setActiveTab(tabID)} isActive={isActive}>
     //   {children}
     // </Button>
     <div>wef</div>
-  )
-}
+  );
+};
 
-export default Tab
+export default Tab;
 
 // Tab.propTypes = {
 //   tabID: PropTypes.number.isRequired,
