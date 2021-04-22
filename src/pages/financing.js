@@ -98,7 +98,7 @@ export const financingSEO = graphql`
         gatsbyImageData(
           formats: [JPG, WEBP, AVIF]
           layout: CONSTRAINED
-          width: 1440
+          width: 1536
         )
       }
     }
