@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
 import { string, bool, func } from "prop-types";
 import Nav from "./Nav";
 import NavIcons from "./NavIcons";
