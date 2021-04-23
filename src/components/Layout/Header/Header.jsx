@@ -23,19 +23,20 @@ const Header = ({
       cartStatus={cartStatus}
       menuStatus={menuStatus}
       // className={moved}
-      className="flex flex-col z-10 shadow-lg bg-blueGray-100"
+      className="z-10 flex flex-col shadow-lg bg-blueGray-100"
       role="banner"
     >
       {menuStatus === "open" || cartStatus === "open" ? (
         <div className="MenuOverLay" />
       ) : null}
-      <div className="max-w-screen-2xl  flex flex-col-reverse mx-auto w-full md:flex-row md:justify-between">
+      <div className="flex flex-col-reverse w-full mx-auto max-w-screen-2xl md:flex-row md:justify-between">
         <div className="flex items-center pl-1" style={{ height: "60px" }}>
-          <Link className="brand__anchor" to="/" title="Back to home page">
-            <GatsbyImage
-              image={pandaLogo.gatsbyImageData}
-              formats={["auto", "webp", "avif"]}
+          <Link className="header__brandLink" to="/" title="Back to home page">
+            <img
+              loading="eager"
+              src={pandaLogo.url}
               alt={pandaLogo.alt}
+              style={{ maxWidth: "180px", maxHeight: "110px", width: "100%" }}
             />
           </Link>
           <Link
@@ -43,8 +44,8 @@ const Header = ({
             to="/"
             style={{ textDecoration: "none" }}
           >
-            <h1 className="self-center font-black text-2xl pl-1 text-red-900 phablet:text-4xl lg:text-5xl lg:pl-4">
-              <span className="italic text-lightBlue-900 font-black">
+            <h1 className="self-center pl-1 text-2xl font-black text-red-900 phablet:text-4xl lg:text-5xl lg:pl-4">
+              <span className="italic font-black text-lightBlue-900">
                 E.S.C.
               </span>
               Mattress Center
@@ -59,7 +60,7 @@ const Header = ({
           searchFocus={searchFocus}
           setSearchFocus={setSearchFocus}
         />
-        <div className="printOnlyContactInfo">
+        <div className="header__printOnlyContactInfo">
           <div>10121 Evergreen Way, #30, Everett, WA 98204</div>
           <div>(425) 512.0017</div>
         </div>

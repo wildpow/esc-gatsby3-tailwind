@@ -7,7 +7,7 @@ const useLogo = () => {
         datoCmsFrontPage {
           pandaLogo {
             alt
-            gatsbyImageData(layout: CONSTRAINED, width: 90)
+            url
           }
         }
       }

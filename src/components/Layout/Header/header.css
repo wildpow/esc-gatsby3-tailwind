@@ -1,8 +1,33 @@
-.printOnlyContactInfo {
+.header__printOnlyContactInfo {
   display: none;
 }
+
+.header__brandLink {
+  width: 60px;
+  position: relative;
+  display: block;
+  flex-shrink: 0;
+  line-height: 1;
+  transition: all 0.2s ease;
+  img {
+    transition: all 0.2s ease;
+  }
+  & :hover {
+    transform: scale(1.1);
+  }
+}
+@media screen and (min-width: 550px) {
+  .header__brandLink {
+    width: 75px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header__brandLink {
+    width: 90px;
+  }
+}
 @media print {
-  .printOnlyContactInfo {
+  .header__printOnlyContactInfo {
     display: flex;
     justify-content: space-between;
   }
