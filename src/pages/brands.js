@@ -20,9 +20,9 @@ const Brands = ({ data }) => (
         title="Our Brands"
       />
       <div
-        className="brands_grid px-1 mx-auto grid items-stretch justify-center justify-items-center content-start pt-2"
+        className="grid items-stretch content-start justify-center px-1 pt-2 mx-auto brands_grid justify-items-center"
         style={{
-          maxWidth: "1440px",
+          maxWidth: "1536px",
           minWidth: "320px",
           scrollBehavior: "smooth",
         }}
