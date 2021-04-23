@@ -46,6 +46,32 @@ const cfg = {
         matchFields: ["slug", "description", "objectID"],
       },
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images-datocms`,
+            options: {
+              linkImagesToOriginal: false,
+              // tracedSVG: true,
+              // withWebp: false,
+              // quality: 80,
+              // You need to specify your project read-only API token here!
+              apiToken: process.env.DATO_API,
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              // maxWidth: 780,
+              maxWidth: 780,
+              wrapperStyle: "margin-top: 40px; margin-bottom: 20px;",
+
+              // wrapperStyle: "padding-top: 20px; padding-bottom: 20px;",
+            },
+          },
+        ],
+      },
+    },
     // SOURCE PLUG-INS
     {
       resolve: `gatsby-source-datocms`,
