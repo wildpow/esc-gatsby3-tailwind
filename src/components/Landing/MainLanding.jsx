@@ -3,13 +3,12 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import PropTypes from "prop-types";
 import { HelmetDatoCms } from "gatsby-source-datocms";
 import TabBox from "./TabBox";
-import { P } from "./Landing.styled";
 import HeaderButtons from "./HeaderButtons";
 
 const Landing = ({ data, buttonName, buttonURL }) => {
   const { headingImg, heroImg, description, tabBox, seoLink } = data;
   return (
-    <section className="bg-white pt-7 flex justify-center w-full flex-col items-center">
+    <section className="flex flex-col items-center justify-center w-full bg-white pt-7">
       <HelmetDatoCms seo={seoLink.seoMetaTags} />
       <header
         className=" mb-7"
