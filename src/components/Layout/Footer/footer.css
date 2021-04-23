@@ -1,4 +1,4 @@
-.footerRoot {
+.footer__root {
   a,
   svg {
     @apply transition duration-200 ease-in-out text-blueGray-100;
@@ -12,7 +12,7 @@
   }
 }
 
-.topWrapper {
+.footer__topWrapper {
   max-width: 1440px;
   section {
     width: 310px;
@@ -23,16 +23,16 @@
   }
 }
 
-.link:hover {
+.footer__localSupportLink:hover {
   transform: scale3d(1.05, 1.05, 1);
 }
-.middleWrapper {
+.footer__middleWrapper {
   max-width: 1224px;
 }
-.middleWrapper__contact a {
+.footer__contact a {
   @apply px-3 py-0 text-red-200 underline hover:text-lightBlue-100;
 }
-.social-icons a {
+.footer__social-icons a {
   @apply pr-8;
   svg {
     width: 35px;
@@ -43,14 +43,14 @@
   }
 }
 
-.bottomWrapper {
+.footer__bottomWrapper {
   max-width: 1224px;
   aside a {
     @apply px-2 text-red-200 underline hover:text-lightBlue-100;
   }
 }
 
-.navlinks {
+.footer__navlinks {
   li {
     @apply relative pb-2 pl-5 m-0;
   }

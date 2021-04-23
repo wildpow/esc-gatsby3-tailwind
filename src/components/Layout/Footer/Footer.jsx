@@ -24,12 +24,12 @@ const Footer = ({ moved }) => {
     return null;
   });
   return (
-    <footer className="flex flex-col justify-between px-5 pt-20 font-sans bg-lightBlue-900 text-blueGray-100 footerRoot">
-      <div className="flex flex-wrap w-full mx-auto my-0 topWrapper justify-evenly">
-        <section className="subpixel-antialiased	">
+    <footer className="flex flex-col justify-between px-5 pt-20 font-sans bg-lightBlue-900 text-blueGray-100 footer__root">
+      <div className="flex flex-wrap w-full mx-auto my-0 footer__topWrapper justify-evenly">
+        <section className="subpixel-antialiased ">
           <div>
             <h3>Stay Connected</h3>
-            <div className="flex transition duration-200 ease-in-out social-icons ">
+            <div className="flex transition duration-200 ease-in-out footer__social-icons ">
               <OutboundLink
                 href="https://www.facebook.com/ESCMattressCenter/"
                 target="_blank"
@@ -69,18 +69,18 @@ const Footer = ({ moved }) => {
             <h3>Hours</h3>
             <div className="flex">
               <div className="pr-6 ">
-                <h6 className="pb-2 text-base text-blueGray-50 font-normal">
+                <h6 className="pb-2 text-base font-normal text-blueGray-50">
                   Mon-Sat:
                 </h6>
-                <h6 className="pb-2 text-base text-blueGray-50 font-normal">
+                <h6 className="pb-2 text-base font-normal text-blueGray-50">
                   Sunday:
                 </h6>
               </div>
               <div className="flex flex-col ">
-                <h6 className="pb-2 text-base text-blueGray-50 font-normal">
+                <h6 className="pb-2 text-base font-normal text-blueGray-50">
                   10am - 7pm
                 </h6>
-                <h6 className="pb-2 text-base text-blueGray-50 font-normal">
+                <h6 className="pb-2 text-base font-normal text-blueGray-50">
                   {" "}
                   10am - 6pm
                 </h6>
@@ -90,7 +90,7 @@ const Footer = ({ moved }) => {
         </section>
         <section>
           <h3>Navigate</h3>
-          <div className="flex justify-between navlinks">
+          <div className="flex justify-between footer__navlinks">
             <ul className="pl-0 mt-0 list-none ">
               <li>
                 <Link to="/brands">Mattresses</Link>
@@ -130,7 +130,7 @@ const Footer = ({ moved }) => {
           </div>
         </section>
       </div>
-      <div className="flex flex-wrap w-full mx-auto my-0 topWrapper justify-evenly">
+      <div className="flex flex-wrap w-full mx-auto my-0 footer__topWrapper justify-evenly">
         <section>
           <div>
             <h3>Our Partners</h3>
@@ -139,7 +139,7 @@ const Footer = ({ moved }) => {
                 href="https://www.milb.com/everett"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="link"
+                className="footer__localSupportLink"
                 style={{ textDecoration: "none" }}
               >
                 <GatsbyImage
@@ -155,7 +155,7 @@ const Footer = ({ moved }) => {
                 href="https://clothesforkids.org/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="clothesForKids link"
+                className="footer__localSupportLink"
               >
                 <GatsbyImage
                   image={clothsForKids.gatsbyImageData}
@@ -189,7 +189,7 @@ const Footer = ({ moved }) => {
         </section>
       </div>
       <div>
-        <section className="flex flex-col justify-center px-0 py-4 mx-auto my-0 text-sm font-light border-t-2 border-solid border-blueGray-50 middleWrapper border-opacity-10">
+        <section className="flex flex-col justify-center px-0 py-4 mx-auto my-0 text-sm font-light border-t-2 border-solid border-blueGray-50 footer__middleWrapper border-opacity-10">
           <aside className="flex flex-col">
             <h4 className="pb-2 m-0 text-base font-normal text-center text-blueGray-400">
               E.S.C. Mattress Center
@@ -198,7 +198,7 @@ const Footer = ({ moved }) => {
               10121 Evergreen Way, #30, Everett, WA 98204
             </span>
           </aside>
-          <div className="flex justify-center pt-2 text-base middleWrapper__contact">
+          <div className="flex justify-center pt-2 text-base footer__contact">
             <OutboundLink
               href="https://goo.gl/maps/nqXkkkAGRdu"
               target="_blank"
@@ -215,7 +215,7 @@ const Footer = ({ moved }) => {
             </OutboundLink>
           </div>
         </section>
-        <section className="flex flex-col justify-center px-0 py-4 mx-auto my-0 border-t-2 border-solid bottomWrapper border-blueGray-50 border-opacity-10">
+        <section className="flex flex-col justify-center px-0 py-4 mx-auto my-0 border-t-2 border-solid footer__bottomWrapper border-blueGray-50 border-opacity-10">
           <aside className="flex justify-center">
             <Link to="/policies">Terms/Policies</Link>
             <Link to="/sitemap">Site Map</Link>
