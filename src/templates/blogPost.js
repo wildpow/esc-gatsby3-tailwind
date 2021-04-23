@@ -1,15 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { HelmetDatoCms } from "gatsby-source-datocms";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import BreadCrumbs from "../components/BreadCrumbs";
 import SuggestionBar from "../components/Blog/SuggestionBar";
+import HeroCard from "../components/HeroCard";
 
-// const Article = tw.article`
-//   prose sm:prose-lg md:prose-xl lg:prose-2xl lg:pb-10 lg:pt-10
-// `;
 const NewPost = ({ data, pageContext }) => {
   const { datoCmsNewBlog } = data;
   const { next, prev } = pageContext;
@@ -45,20 +42,18 @@ const NewPost = ({ data, pageContext }) => {
         </script>
       </HelmetDatoCms>
       <BreadCrumbs next="Blog" here={datoCmsNewBlog.title} />
-      <section className="mx-auto">
-        <GatsbyImage
-          alt={datoCmsNewBlog.coverImage.alt}
-          image={getImage(datoCmsNewBlog.coverImage)}
-        />
-
+      <HeroCard
+        alt={datoCmsNewBlog.coverImage.alt}
+        image={datoCmsNewBlog.coverImage.gatsbyImageData}
+      >
         <article
-          className="prose sm:prose-lg md:prose-xl lg:prose-2xl lg:pb-10 lg:pt-10"
+          className="mx-auto prose sm:prose-lg md:prose-xl lg:prose-2xl"
           dangerouslySetInnerHTML={{
             __html: datoCmsNewBlog.contentNode.childMarkdownRemark.html,
           }}
         />
         <SuggestionBar prev={prev} next={next} />
-      </section>
+      </HeroCard>
     </Layout>
   );
 };
