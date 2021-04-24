@@ -1,0 +1,118 @@
+.hero__root::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 1;
+  left: 0;
+  background: rgba(255, 255, 255, 0.75);
+}
+.hero__root div {
+  grid-template-columns: 100%;
+}
+@media (min-width: 550px) {
+  .hero__root div {
+    grid-template-columns: 50% 50%;
+  }
+  .hero__root::before {
+    background: none;
+    background-image: linear-gradient(
+      270deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.7) 60%,
+      rgba(255, 255, 255, 0.75) 65%,
+      rgba(255, 255, 255, 0.8) 70%,
+      rgba(255, 255, 255, 0.85) 75%,
+      rgba(255, 255, 255, 0.9) 80%,
+      rgba(255, 255, 255, 0.95) 85%,
+      rgba(255, 255, 255, 0.95) 90%,
+      rgba(255, 255, 255, 0.95) 100%
+    );
+  }
+}
+@media (min-width: 768px) {
+  .hero__root div {
+    grid-template-columns: 40% 60%;
+  }
+}
+/* .hero__root::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 1;
+  left: 0;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.hero_img {
+  height: 200px;
+}
+
+.content-wrapper {
+  top: 50%;
+  left: 50%;
+  max-width: 1320px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 100;
+  color: black;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  blockquote {
+    margin: 0;
+    width: 100%;
+    padding-left: 15px;
+  }
+}
+
+.cite {
+  padding-top: 20px;
+  span {
+    display: block;
+  }
+}
+@media (min-width: 550px) {
+  .hero_img {
+    height: 100%;
+  }
+  .hero__root::before {
+    background: none;
+    background-image: linear-gradient(
+      270deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.7) 60%,
+      rgba(255, 255, 255, 0.75) 65%,
+      rgba(255, 255, 255, 0.8) 70%,
+      rgba(255, 255, 255, 0.85) 75%,
+      rgba(255, 255, 255, 0.9) 80%,
+      rgba(255, 255, 255, 0.95) 85%,
+      rgba(255, 255, 255, 0.95) 90%,
+      rgba(255, 255, 255, 0.95) 100%
+    );
+  }
+  .content-wrapper {
+    blockquote {
+      padding-left: 10px;
+      width: 48%;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .content-wrapper {
+    blockquote {
+      padding-left: 5px;
+      font-size: 2.4rem;
+      width: 48%;
+    }
+  }
+} */

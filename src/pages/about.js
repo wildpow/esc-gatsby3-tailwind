@@ -137,7 +137,7 @@ export const about = graphql`
       heroText
       hero {
         alt
-        gatsbyImageData(layout: FULL_WIDTH, width: 1440)
+        gatsbyImageData(layout: FULL_WIDTH, width: 1530)
       }
       threeImageText
       threeImage {
