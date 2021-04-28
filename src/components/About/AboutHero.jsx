@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import "./about.css";
 
 const Hero = ({ heroImg, heroAlt, heroText }) => (
-  <div className="relative grid hero__root ">
+  <div className="relative grid about__hero ">
     <GatsbyImage
       image={getImage(heroImg)}
       alt={heroAlt}

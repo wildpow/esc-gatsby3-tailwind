@@ -1,4 +1,4 @@
-.hero__root::before {
+.about__hero::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -9,14 +9,14 @@
   left: 0;
   background: rgba(255, 255, 255, 0.75);
 }
-.hero__root div {
+.about__hero div {
   grid-template-columns: 100%;
 }
 @media (min-width: 550px) {
-  .hero__root div {
+  .about__hero div {
     grid-template-columns: 50% 50%;
   }
-  .hero__root::before {
+  .about__hero::before {
     background: none;
     background-image: linear-gradient(
       270deg,
@@ -34,7 +34,7 @@
   }
 }
 @media (min-width: 768px) {
-  .hero__root div {
+  .about__hero div {
     grid-template-columns: 40% 60%;
   }
 }

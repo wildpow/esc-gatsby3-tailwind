@@ -1,0 +1,39 @@
+.home__hero {
+  grid-template-rows: 40vh 300px 300px 300px;
+  grid-row-gap: 20px;
+  padding: 0px;
+  display: grid;
+  grid-template-areas:
+    "hero"
+    "shop1"
+    "shop2"
+    "shop3";
+}
+.hero__hero__main {
+  grid-area: hero;
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.home__hero__shop {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 1024px) {
+  .home__hero {
+    grid-template-rows: 50vh 30vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    padding: 20px 0;
+    display: grid;
+    grid-template-areas:
+      "hero hero hero"
+      "shop1 shop2 shop3";
+  }
+}
