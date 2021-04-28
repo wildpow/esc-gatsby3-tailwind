@@ -4,7 +4,11 @@ const { screens } = require("tailwindcss/defaultTheme");
 const forms = require("@tailwindcss/forms");
 
 module.exports = {
-  purge: ["./src/**/*.{js,jsx,ts,tsx}"], // purge css ?
+  purge: {
+    enabled: true,
+    content: ["./src/**/*.js", "./src/**/*.jsx"],
+    preserveHtmlElements: true,
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
@@ -42,13 +46,13 @@ module.exports = {
 
     extend: {
       keyframes: {
-        fade: {
+        fadeIn: {
           "0%": { opacity: 0 },
           "100%": { opacity: 1 },
         },
       },
       animation: {
-        fade: `fade 0.5s linear normal`,
+        fadeIn: `fadeIn 0.35s linear normal`,
       },
 
       colors: {
