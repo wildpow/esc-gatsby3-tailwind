@@ -23,7 +23,7 @@ export default function HomeHero({ heroImg, heroUrl, img1, img2, img3 }) {
           style={{ gridArea: "1/1" }}
           className="relative z-10 home__hero__titleCard--test-2"
         >
-          <div className="p-4 text-2xl bg-red-800 text-blueGray-50 ">
+          <div className="p-4 text-2xl bg-red-900 text-blueGray-50 ">
             Shop Mattresses
           </div>
         </div>
@@ -41,7 +41,7 @@ export default function HomeHero({ heroImg, heroUrl, img1, img2, img3 }) {
       </Link>
 
       <Link
-        className="relative grid w-full h-auto home__hero__shop"
+        className="relative grid w-full h-auto shadow-lg home__hero__shop"
         style={{ gridArea: "shop2" }}
         to="/adjustable"
       >
@@ -68,7 +68,7 @@ export default function HomeHero({ heroImg, heroUrl, img1, img2, img3 }) {
       </Link>
 
       <Link
-        className="relative grid w-full h-auto home__hero__shop"
+        className="relative grid w-full h-auto shadow-lg home__hero__shop"
         style={{ gridArea: "shop3" }}
         to="/accessories/list"
       >
