@@ -5,9 +5,7 @@ const forms = require("@tailwindcss/forms");
 
 module.exports = {
   purge: {
-    enabled: true,
-    content: ["./src/**/*.js", "./src/**/*.jsx"],
-    preserveHtmlElements: true,
+    purge: ["./src/**/*.{js,jsx,ts,tsx}"], // purge css ?
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
